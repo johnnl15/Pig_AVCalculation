@@ -273,7 +273,7 @@ write.csv(stats.test.onesample.GroupTime.median,file="../Datafiles/Statistics/7_
 
 ###doing FDR correction by organ
 organtypes<-unique(zmelt$organ)
-stats.test.onesample.GroupTime.median.perorganFDR
+stats.test.onesample.GroupTime.median.perorganFDR<-data.frame()
 for (i in 1:length(organtypes)){
   zmeltorgan<-zmelt %>% filter(organ==organtypes[i])
   stats.test.onesample.GroupTime.median.each<-zmeltorgan %>% 
